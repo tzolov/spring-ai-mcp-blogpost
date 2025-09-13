@@ -22,15 +22,15 @@ public class McpClientHandlers {
 
 	private final ChatClient chatClient;
 
-	public McpClientHandlers(@Lazy ChatClient chatClient) { // Lazy is needed to avoid circular dependency
+	public McpClientHandlers(@Lazy ChatClient chatClient) { // Lazy is needed to avoid
+															// circular dependency
 		this.chatClient = chatClient;
 	}
 
 	@McpProgress(clients = "my-weather-server")
 	public void progressHandler(ProgressNotification progressNotification) {
-		logger.info("MCP PROGRESS: [{}] progress: {} total: {} message: {}",
-				progressNotification.progressToken(), progressNotification.progress(),
-				progressNotification.total(), progressNotification.message());
+		logger.info("MCP PROGRESS: [{}] progress: {} total: {} message: {}", progressNotification.progressToken(),
+				progressNotification.progress(), progressNotification.total(), progressNotification.message());
 	}
 
 	@McpLogging(clients = "my-weather-server")
@@ -43,13 +43,13 @@ public class McpClientHandlers {
 
 		logger.info("MCP SAMPLING: {}", llmRequest);
 
-		String llmResponse =  chatClient
-				.prompt()
-				.system(llmRequest.systemPrompt())
-				.user(((TextContent) llmRequest.messages().get(0).content()).text())
-				.call()
-				.content();
+		String llmResponse = chatClient.prompt()
+			.system(llmRequest.systemPrompt())
+			.user(((TextContent) llmRequest.messages().get(0).content()).text())
+			.call()
+			.content();
 
 		return CreateMessageResult.builder().content(new TextContent(llmResponse)).build();
 	};
+
 }

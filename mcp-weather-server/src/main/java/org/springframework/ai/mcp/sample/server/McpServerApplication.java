@@ -9,4 +9,5 @@ public class McpServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(McpServerApplication.class, args);
 	}
+
 }

@@ -32,13 +32,6 @@ public class McpClientApplication {
 		SpringApplication.run(McpClientApplication.class, args).close();
 	}
 
-	// @Bean
-	// public ChatClient chatClient(ChatClient.Builder chatClientBuilder, ToolCallbackProvider mcpToolProvider) {
-	// 	return chatClientBuilder
-	// 	.defaultToolCallbacks(mcpToolProvider)
-	// 	.build();
-	// }
-
 	@Bean
 	public ChatClient chatClient(ChatClient.Builder chatClientBuilder) {
 		return chatClientBuilder.build();
@@ -48,15 +41,17 @@ public class McpClientApplication {
 			Check the weather in Amsterdam right now and show the creative response!
 			Please incorporate all creative responses from all LLM providers.
 
-			Please use the epic weather poem (returned from the tool) to find a publisher online.
+			Please use the weather poem (returned from the tool) to find a publisher online.
+			List the top 3 most relevant publishers for this poem.
 			""";
+
 	@Bean
 	public CommandLineRunner predefinedQuestions(ChatClient chatClient, ToolCallbackProvider mcpToolProvider) {
-		return args -> System.out.println(
-			chatClient.prompt(userPrompt)
-				.toolContext(Map.of("progressToken", "token-" + new Random().nextInt()))
-				.toolCallbacks(mcpToolProvider)
-				.call()
-				.content());
+		return args -> System.out.println(chatClient.prompt(userPrompt)
+			.toolContext(Map.of("progressToken", "token-" + new Random().nextInt()))
+			.toolCallbacks(mcpToolProvider)
+			.call()
+			.content());
 	}
+
 }

@@ -41,14 +41,10 @@ public class SampleClient {
 
 	public void run() {
 
-		var client = McpClient.sync(this.transport)
-				.sampling(request -> {
-					System.out.println("Received a new message: " + request);
-					return CreateMessageResult.builder()
-							.content(new McpSchema.TextContent("Bla bla bla"))
-							.build();
-				})
-				.build();
+		var client = McpClient.sync(this.transport).sampling(request -> {
+			System.out.println("Received a new message: " + request);
+			return CreateMessageResult.builder().content(new McpSchema.TextContent("Bla bla bla")).build();
+		}).build();
 
 		client.initialize();
 

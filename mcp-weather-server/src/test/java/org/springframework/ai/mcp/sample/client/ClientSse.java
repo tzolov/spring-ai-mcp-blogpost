@@ -17,7 +17,6 @@ package org.springframework.ai.mcp.sample.client;
 
 import io.modelcontextprotocol.client.transport.HttpClientSseClientTransport;
 
-
 /**
  * @author Christian Tzolov
  */
