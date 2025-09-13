@@ -12,18 +12,18 @@ The Model Context Protocol (MCP) standardizes how AI applications interact with 
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    MCP Weather Client                        │
+┌────────────────────────────────────────────────────────────┐
+│                    MCP Weather Client                      │
 │  ┌─────────────┐  ┌──────────────┐  ┌──────────────────┐   │
 │  │  ChatClient │──│ MCP Client   │──│ Weather Server   │   │
 │  │  (Claude)   │  │  Transport   │  │ (Streamable-HTTP)│   │
 │  └─────────────┘  └──────────────┘  └──────────────────┘   │
-│                           │                                  │
+│                           │                                │
 │                   ┌──────────────┐  ┌──────────────────┐   │
 │                   │ MCP Client   │──│  Brave Search    │   │
 │                   │  Transport   │  │     (STDIO)      │   │
 │                   └──────────────┘  └──────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────┘
 ```
 
 ## Features Demonstrated
