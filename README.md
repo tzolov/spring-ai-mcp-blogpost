@@ -325,7 +325,7 @@ public void multiServerProgressHandler(ProgressNotification notification) {
 
 ## Resources
 
-- [Blog Post: Connect Your AI to Everything: Spring AI's MCP Boot Starters](https://spring.io/blog/2025/09/spring-ai-mcp-intro-blog)
+- [Blog Post: Connect Your AI to Everything: Spring AI's MCP Boot Starters](https://spring.io/blog/2025/09/16/spring-ai-mcp-intro-blog)
 - [Spring AI MCP Documentation](https://docs.spring.io/spring-ai/reference/1.1-SNAPSHOT/api/mcp/mcp-overview.html)
 - [Model Context Protocol Specification](https://modelcontextprotocol.io/specification/)
 - [MCP Java SDK](https://modelcontextprotocol.io/sdk/java/mcp-overview)
