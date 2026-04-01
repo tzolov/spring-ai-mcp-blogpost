@@ -3,9 +3,9 @@ spring:
     name: mcp
   main:
     web-application-type: none
-  
+
   ai:
-    # Set credentials for your Anthropic API account 
+    # Set credentials for your Anthropic API account
     anthropic:
       api-key: ${ANTHROPIC_API_KEY}
 
@@ -15,14 +15,14 @@ spring:
         streamable-http:
           connections:
             my-weather-server:
-              url: http://localhost:8080        
+              url: http://localhost:8080
         stdio:
           connections:
             brave-search:
               command: npx
               args:
                 - "-y"
-                - "@modelcontextprotocol/server-brave-search"        
+                - "@modelcontextprotocol/server-brave-search"
 
 # Debug configuration (commented out)
 # debug: true
