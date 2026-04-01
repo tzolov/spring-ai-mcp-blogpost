@@ -21,7 +21,7 @@
 	</licenses>
 
 	<properties>
-		<spring-javaformat-maven-plugin.version>0.0.43</spring-javaformat-maven-plugin.version>
+		<spring-javaformat-maven-plugin.version>0.0.47</spring-javaformat-maven-plugin.version>
 	</properties>
 
 	<modules>
