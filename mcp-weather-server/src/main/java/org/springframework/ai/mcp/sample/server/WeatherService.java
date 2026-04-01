@@ -61,7 +61,7 @@ public class WeatherService {
 		exchange.loggingNotification(LoggingMessageNotification.builder()
 			.level(LoggingLevel.DEBUG)
 			.data("Call getTemperature Tool with latitude: " + latitude + " and longitude: " + longitude)
-			.meta(Map.of()) // non null meata as a workaround for bug: ...
+			.meta(Map.of()) // non null meta as a workaround for bug: ...
 			.build());
 
 		// 0% progress

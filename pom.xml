@@ -10,8 +10,8 @@
 	<packaging>pom</packaging>
 	<url>https://github.com/tzolov/spring-ai-mcp-blogpost</url>
 
-	<name>Spring AI</name>
-	<description>Building AI applications with Spring Boot</description>
+	<name>Spring AI - MCP Weather - </name>
+	<description>Sample Spring Boot application demonstrating MCP client and server weather usage</description>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
